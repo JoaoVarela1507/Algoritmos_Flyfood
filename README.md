@@ -6,9 +6,14 @@ Este repositório contém a implementação dos algoritmos utilizados no artigo 
 📌 Códigos-fonte utilizados para testes e simulações.
 📌 Conjuntos de dados para validação dos algoritmos.
 📌 Documentação e análise dos resultados obtidos.
+
+
 🚀 Tecnologias Utilizadas
 Linguagem: Python
 Bibliotecas: NumPy e Matplotlib
+
+
+
 📜 Descrição dos Algoritmos
 Algoritmo Guloso: Constrói soluções rapidamente escolhendo sempre a melhor opção disponível no momento.
 Força Bruta: Garante a melhor solução ao testar todas as combinações possíveis, mas com alto custo computacional.
