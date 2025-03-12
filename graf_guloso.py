@@ -179,8 +179,8 @@ def visualizar_construcao_percurso(cidades, etapas, intervalo=0.5):
 
 def main():
  
-    # cidade = ler_arquivo_tsp("tsp/berlin52.tsp")
-    cidade = ler_arquivo_tsp("tsp/bier127.tsp")
+    cidade = ler_arquivo_tsp("tsp/berlin52.tsp")
+    # cidade = ler_arquivo_tsp("tsp/bier127.tsp")
 
     plotar_cidades(cidade, titulo="Distribuição das Cidades")
     
@@ -190,7 +190,7 @@ def main():
     print(f"Percurso encontrado: {percurso}")
     print(f"Distância total: {distancia:.2f} unidades")
     
-    plotar_percurso(cidade, percurso, titulo="Percurso Encontrado pelo Algoritmo Guloso (Berlin52)")
+    plotar_percurso(cidade, percurso, titulo="Percurso Encontrado pelo Algoritmo Guloso")
     
     visualizar_construcao_percurso(cidade, etapas, intervalo=0.8)
 
