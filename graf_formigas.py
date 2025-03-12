@@ -3,9 +3,10 @@ import numpy as np
 from alg_formigas import *
 import random
 from ler_arquivo_tsp import ler_arquivo_tsp
+import time
 
-# cidades = ler_arquivo_tsp("tsp/berlin52.tsp")
-cidades = ler_arquivo_tsp("tsp/bier127.tsp")
+cidades = ler_arquivo_tsp("tsp/berlin52.tsp")
+# cidades = ler_arquivo_tsp("tsp/bier127.tsp")
 
 def principal():
     
@@ -132,4 +133,7 @@ def principal():
 
 
 if __name__ == "__main__":
+    start_time = time.time()
     principal()
+    end_time = time.time()
+    print(f"Tempo de execução: {end_time - start_time:.2f} segundos")

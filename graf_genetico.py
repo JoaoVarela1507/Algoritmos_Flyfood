@@ -3,6 +3,7 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 from ler_arquivo_tsp import ler_arquivo_tsp
+import time
 
 def gerar_populacao_inicial(numero_cidades, numero_individuos):
     populacao = []
@@ -252,13 +253,15 @@ def visualizar_matriz_distancias(matriz_distancias):
 if __name__ == "__main__":
     random.seed(42)
     
-    # cidade = ler_arquivo_tsp("tsp/berlin52.tsp")
-    cidade = ler_arquivo_tsp("tsp/bier127.tsp")
+    cidade = ler_arquivo_tsp("tsp/berlin52.tsp")
+    # cidade = ler_arquivo_tsp("tsp/bier127.tsp")
     
     numero_individuos = 100
     numero_geracoes = 200
     taxa_cruzamento = 0.8
     taxa_mutacao = 0.1
+    
+    start_time = time.time()
     
     menor_distancia, melhor_caminho_cidades, melhor_rota, evolucao_custo, evolucao_aptidao, evolucao_diversidade = evolucao(
         cidade, 
@@ -268,9 +271,12 @@ if __name__ == "__main__":
         taxa_mutacao
     )
     
+    end_time = time.time()
+    execution_time = end_time - start_time
+    
     print(f"Distância total do melhor caminho: {menor_distancia:.2f}")
     print(f"Melhor rota (índices): {melhor_rota}")
-    
+    print(f"Tempo de execução: {execution_time:.2f} segundos")
     
     visualizar_rota(cidade, melhor_rota)
     visualizar_evolucao_custo(evolucao_custo)
